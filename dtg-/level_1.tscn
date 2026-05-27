@@ -1,5 +1,38 @@
-[gd_scene format=3 uid="uid://cup0g2ulqlatx"]
+[gd_scene format=4 uid="uid://cup0g2ulqlatx"]
+
+[ext_resource type="Texture2D" uid="uid://xptpxmr3erbg" path="res://Mossy Assets/Mossy Tileset/Mossy - FloatingPlatforms.png" id="1_3hls8"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hbghi"]
+texture = ExtResource("1_3hls8")
+texture_region_size = Vector2i(512, 512)
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+1:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-256, -116.75833, 256, -116.12189, 256, 219.69003, -256, 256)
+2:2/0 = 0
+2:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-256, -116.75833, 256, -119.260315, 256, 256, -256, 256)
+3:2/0 = 0
+3:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-256, -116.75833, 94.15286, -116.12189, 122.39874, 200.85947, -256, 256)
+0:3/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+3:3/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_hn12h"]
+tile_size = Vector2i(512, 512)
+physics_layer_0/collision_layer = 1
+sources/1 = SubResource("TileSetAtlasSource_hbghi")
 
 [node name="level_1" type="Node2D" unique_id=758420998]
 
 [node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=1637645939]
+z_index = 1
+tile_map_data = PackedByteArray("AAAAAAAAAQABAAIAAAABAAAAAQACAAIAAAACAAAAAQACAAIAAAADAAAAAQACAAIAAAAEAAAAAQACAAIAAAAFAAAAAQACAAIAAAAGAAAAAQADAAIAAAA=")
+tile_set = SubResource("TileSet_hn12h")

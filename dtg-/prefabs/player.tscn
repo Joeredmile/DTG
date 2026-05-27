@@ -5,3 +5,5 @@
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1863117008]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=822922244]
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1135688486]

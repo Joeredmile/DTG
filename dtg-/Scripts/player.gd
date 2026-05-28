@@ -29,3 +29,15 @@ func _physics_process(delta: float) -> void:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 		
 	move_and_slide()
+
+
+
+	if is_on_floor():
+		if abs(velocity.x) > 0.1:
+			animation.play("run")
+		else:
+			animation.play("idle")
+			
+	else:
+		animation.play("jump")
+	

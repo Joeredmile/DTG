@@ -1,7 +1,0 @@
-[gd_scene format=3 uid="uid://bkjvu0askf3f8"]
-
-[node name="Player" type="CharacterBody2D" unique_id=1281659401]
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1863117008]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=822922244]

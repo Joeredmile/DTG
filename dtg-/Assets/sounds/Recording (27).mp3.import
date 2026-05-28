@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://d1wkfgxmggmhb"
+path="res://.godot/imported/Recording (27).mp3-6dd3b76c2a354d17ccaa1fee493e61b8.mp3str"
+
+[deps]
+
+source_file="res://Assets/sounds/Recording (27).mp3"
+dest_files=["res://.godot/imported/Recording (27).mp3-6dd3b76c2a354d17ccaa1fee493e61b8.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

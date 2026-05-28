@@ -1,16 +1,70 @@
 [gd_scene format=3 uid="uid://caps8uem0603f"]
 
-[node name="MainMenu" type="Control" unique_id=1076730224]
+[ext_resource type="Script" uid="uid://bwb32vupfmpth" path="res://Scenes/main_menu.gd" id="1_28flt"]
+[ext_resource type="PackedScene" uid="uid://bsjxk3e5iq7ks" path="res://Scenes/fade_transition.tscn" id="2_48xlc"]
+
+[node name="Main Menu" type="Node2D" unique_id=703314489]
+script = ExtResource("1_28flt")
+
+[node name="fade_transition" parent="." unique_id=124072613 instance=ExtResource("2_48xlc")]
+visible = false
+
+[node name="Fade_timer" type="Timer" parent="fade_transition" unique_id=1163437949]
+
+[node name="Button_Manager" type="Control" parent="." unique_id=978240885]
 layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
+anchors_preset = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+
+[node name="Start" type="Button" parent="Button_Manager" unique_id=2081108561]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -112.89285
+offset_top = -93.0
+offset_right = 112.89282
+offset_bottom = -38.5
 grow_horizontal = 2
 grow_vertical = 2
+text = "Start
+"
 
-[node name="Button" type="Button" parent="." unique_id=329479440]
-layout_mode = 0
-offset_left = 470.0
-offset_top = 273.0
-offset_right = 586.0
-offset_bottom = 306.0
+[node name="Options" type="Button" parent="Button_Manager" unique_id=594434867]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -112.89284
+offset_top = -27.25
+offset_right = 112.89284
+offset_bottom = 27.25
+grow_horizontal = 2
+grow_vertical = 2
+text = "Options
+"
+
+[node name="Quit" type="Button" parent="Button_Manager" unique_id=1472075130]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -112.89285
+offset_top = 39.0
+offset_right = 112.89282
+offset_bottom = 93.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Quit"
+
+[connection signal="timeout" from="fade_transition/Fade_timer" to="." method="_on_fade_timer_timeout"]
+[connection signal="pressed" from="Button_Manager/Start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="Button_Manager/Options" to="." method="_on_options_pressed"]
+[connection signal="pressed" from="Button_Manager/Quit" to="." method="_on_quit_pressed"]

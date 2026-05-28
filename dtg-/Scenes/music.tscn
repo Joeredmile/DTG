@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://dhkcus0mpm76s"]
+
+[ext_resource type="AudioStream" uid="uid://d1jeaoy1171h7" path="res://Assets/sounds/Recording (29).mp3" id="1_fbmny"]
+
+[node name="music" type="AudioStreamPlayer" unique_id=297401685]
+stream = ExtResource("1_fbmny")
+autoplay = true

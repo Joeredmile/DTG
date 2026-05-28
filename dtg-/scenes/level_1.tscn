@@ -1,26 +1,26 @@
-[gd_scene format=3 uid="uid://bkjvu0askf3f8"]
+[gd_scene format=3 uid="uid://cup0g2ulqlatx"]
 
-[ext_resource type="Script" uid="uid://xcno4cp03k0u" path="res://Scripts/player.gd" id="1_cvnsp"]
-[ext_resource type="Texture2D" uid="uid://drclvbb3ykndh" path="res://Assets/Player.png" id="2_cvnsp"]
+[ext_resource type="Script" uid="uid://xcno4cp03k0u" path="res://Scripts/player.gd" id="1_8ffim"]
+[ext_resource type="Texture2D" uid="uid://drclvbb3ykndh" path="res://Assets/Player.png" id="2_xfk5q"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_6t5aa"]
-atlas = ExtResource("2_cvnsp")
+atlas = ExtResource("2_xfk5q")
 region = Rect2(0, 0, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_vgqql"]
-atlas = ExtResource("2_cvnsp")
+atlas = ExtResource("2_xfk5q")
 region = Rect2(64, 0, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_fkybt"]
-atlas = ExtResource("2_cvnsp")
+atlas = ExtResource("2_xfk5q")
 region = Rect2(0, 64, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_x3wgy"]
-atlas = ExtResource("2_cvnsp")
+atlas = ExtResource("2_xfk5q")
 region = Rect2(64, 64, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_3smsa"]
-atlas = ExtResource("2_cvnsp")
+atlas = ExtResource("2_xfk5q")
 region = Rect2(0, 128, 64, 64)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_8erm5"]
@@ -56,7 +56,7 @@ radius = 12.0
 height = 60.0
 
 [node name="Player" type="CharacterBody2D" unique_id=1281659401]
-script = ExtResource("1_cvnsp")
+script = ExtResource("1_8ffim")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=235802300]
 sprite_frames = SubResource("SpriteFrames_8erm5")

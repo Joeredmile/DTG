@@ -1,3 +1,45 @@
 [gd_scene format=3 uid="uid://dcnvkvq8sdjnj"]
 
+[ext_resource type="Script" uid="uid://d0scr3nmjanli" path="res://Scripts/options.gd" id="1_prnvy"]
+[ext_resource type="AudioStream" uid="uid://prdxtnswuocq" path="res://Assets/sounds/Recording (24).mp3" id="2_4tmxy"]
+
 [node name="Options" type="Node2D" unique_id=1168613532]
+script = ExtResource("1_prnvy")
+
+[node name="foster" type="Button" parent="." unique_id=465148090]
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 477.0
+offset_top = 240.0
+offset_right = 647.0
+offset_bottom = 271.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+text = "Frick foster button"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="foster" unique_id=1756423439]
+stream = ExtResource("2_4tmxy")
+
+[node name="backtoomainmenu" type="Button" parent="." unique_id=1621603916]
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 487.0
+offset_top = 274.0
+offset_right = 639.0
+offset_bottom = 305.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+text = "Back to Main Menu
+"
+
+[connection signal="pressed" from="foster" to="." method="_on_foster_pressed"]
+[connection signal="pressed" from="foster" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="backtoomainmenu" to="." method="_on_backtoomainmenu_pressed"]
+[connection signal="pressed" from="backtoomainmenu" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="backtoomainmenu" to="." method="_on_backtooptions_pressed"]

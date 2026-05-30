@@ -105,3 +105,9 @@ position_smoothing_speed = 2.0
 [node name="CollisionShape2D" type="CollisionShape2D" parent="hitbox" unique_id=2145519758]
 position = Vector2(0, 1)
 shape = SubResource("CapsuleShape2D_6t5aa")
+
+[node name="dashtimer" type="Timer" parent="." unique_id=1066522]
+wait_time = 0.123
+one_shot = true
+
+[connection signal="timeout" from="dashtimer" to="." method="_on_dashtimer_timeout"]

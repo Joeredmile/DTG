@@ -20,7 +20,6 @@ func _physics_process(delta: float) -> void:
 		velocity.y = JUMP_VELOCITY
 		
 	# Get the input direction and handle the movement/deceleration.
-	# As good practice, you should replace UI actions with custom gameplay actions.
 	var direction = Input.get_axis("left", "right")
 	if direction:
 		velocity.x = direction * SPEED
@@ -38,7 +37,7 @@ func _physics_process(delta: float) -> void:
 	#handle dash
 	if Input.is_action_just_pressed("dash") and _dash_cd_timer <= 0.0:
 		$dashtimer.start()
-		SPEED *= 3.5
+		SPEED *= 5
 		velocity.x = direction * SPEED
 		_dash_cd_timer = dash_cooldown
 		

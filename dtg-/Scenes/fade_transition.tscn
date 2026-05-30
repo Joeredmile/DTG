@@ -54,8 +54,10 @@ _data = {
 }
 
 [node name="fade_transition" type="ColorRect" unique_id=124072613]
-offset_right = 1152.0
-offset_bottom = 648.0
+offset_left = -1366.0
+offset_top = -1070.0
+offset_right = 2727.0
+offset_bottom = 1596.0
 color = Color(0, 0, 0, 0)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1462768628]

@@ -94,6 +94,7 @@ position = Vector2(0, 1)
 shape = SubResource("CapsuleShape2D_4dohe")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=69406192]
+position = Vector2(0, 10)
 zoom = Vector2(1.4, 1.4)
 limit_top = -10000001
 limit_bottom = 399

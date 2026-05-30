@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://bal7v1680hnp2"]
+[gd_scene format=4 uid="uid://bal7v1680hnp2"]
 
 [ext_resource type="Script" uid="uid://dtjybc56174hu" path="res://Scripts/level_1.gd" id="1_evi0p"]
 [ext_resource type="Texture2D" uid="uid://c3a3g6fxkqn13" path="res://icon.svg" id="1_vk57k"]
@@ -6,11 +6,13 @@
 [ext_resource type="PackedScene" uid="uid://dg74teeu1ybaj" path="res://Scenes/coin.tscn" id="3_xfk5q"]
 [ext_resource type="PackedScene" uid="uid://ccr7t7bo8yajq" path="res://Scenes/killzone.tscn" id="4_7p6j4"]
 [ext_resource type="PackedScene" uid="uid://bsjxk3e5iq7ks" path="res://Scenes/fade_transition.tscn" id="6_lsmp6"]
+[ext_resource type="PackedScene" uid="uid://t2pw4hwgshjp" path="res://prefabs/portal.tscn" id="7_lsmp6"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6444e"]
 texture = ExtResource("1_vk57k")
-texture_region_size = Vector2i(64, 64)
+texture_region_size = Vector2i(128, 128)
 0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-64, -64, 64, -64, 64, 64, -64, 64)
 1:0/0 = 0
 2:0/0 = 0
 3:0/0 = 0
@@ -77,6 +79,7 @@ texture_region_size = Vector2i(64, 64)
 
 [sub_resource type="TileSet" id="TileSet_evi0p"]
 tile_size = Vector2i(128, 128)
+physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_6444e")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vk57k"]
@@ -161,12 +164,13 @@ distance = -611.99115
 script = ExtResource("1_evi0p")
 
 [node name="fade_transition" parent="." unique_id=124072613 instance=ExtResource("6_lsmp6")]
-offset_left = -644.0
-offset_top = -269.0
-offset_right = 508.0
-offset_bottom = 379.0
+offset_left = -1963.0
+offset_top = -1046.0
+offset_right = 1900.0
+offset_bottom = 1289.0
 
 [node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=812951357]
+tile_map_data = PackedByteArray("AAAbAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAAdAAAAAAAAAAAAAAAeAAAAAAAAAAAAAAAfAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAhAAAAAAAAAAAAAAAiAAAAAAAAAAAAAAAgAP3/AAAAAAAAAAAhAP3/AAAAAAAAAAAiAP3/AAAAAAAAAAAjAP7/AAAAAAAAAAAjAP//AAAAAAAAAAA=")
 tile_set = SubResource("TileSet_evi0p")
 
 [node name="TileMap" type="TileMap" parent="." unique_id=1269956338]
@@ -219,3 +223,6 @@ position = Vector2(61, 98)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="killzone" unique_id=1295282704]
 shape = SubResource("WorldBoundaryShape2D_6444e")
+
+[node name="portal" parent="." unique_id=627086439 instance=ExtResource("7_lsmp6")]
+position = Vector2(4287, -8)
